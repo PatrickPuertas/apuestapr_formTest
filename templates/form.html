@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Form</title>
+  <title>User Form - ApuestaPR</title>
 </head>
 <body>
   <form id="userForm" action="/submit" method="post">
@@ -16,7 +16,6 @@
     <label for="birthday">Birthday:</label>
     <input type="date" id="birthday" name="birthday" value="{{ user_data['birthday'] if user_data else '' }}" required><br>
 
-    <!-- Adicione um campo hidden para armazenar o user_id -->
     <input type="hidden" id="user_id" name="user_id" value="{{ user_data['_id'] if user_data else '' }}">
 
     <button type="submit">Submit</button>

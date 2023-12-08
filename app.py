@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 from flask_pymongo import PyMongo
 from bson import ObjectId
 
@@ -52,14 +52,6 @@ def get_form_data():
         return render_template('form.html', user_data=user_data)
     else:
         return 'User not found', 404
-    
-@app.route('/form/all')
-def get_all_form_data():
-    users_data = list(mongo.db.users.find())
-    if users_data:
-        return render_template(users_data[0])
-    else:
-        return 'No users found', 404
     
 def get_next_user_id():
     last_user = mongo.db.users.find_one(sort=[('user_id', -1)])
