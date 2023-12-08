@@ -1,0 +1,13 @@
+# Web Form System with Flask and MongoDB for ApuestaPR and validation by Jason Raede
+
+This is a simple web form project developed with Flask and MongoDB. The system allows users to fill in information in a form, which is then stored in a MongoDB database. Additionally, it is possible to view the submitted data based on the user's ID (ObjectID at the MongoDB).
+
+## Environment Setup
+
+### Prerequisites
+
+Before getting started, make sure you have the following requirements installed on your machine:
+
+- Python
+- Flask
+- MongoDB
